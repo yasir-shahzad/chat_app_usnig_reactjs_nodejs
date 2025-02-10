@@ -33,7 +33,7 @@ function App() {
           <Route path="/singup" element={ authUser===null ? <SingUpPage/> : <Navigate to="/"/>  } />
           <Route path="/login" element={ authUser===null ? <LoginPage/> : <Navigate to="/"/>} />
           <Route path="/settings" element={  <SettingsPage/>} />
-          <Route path="/profil" element={authUser ? <ProfilPage/> : <Navigate to="/login"/>} />
+          <Route path="/profile" element={authUser ? <ProfilPage/> : <Navigate to="/login"/>} />
         </Routes> 
         <Toaster/> 
     </>
