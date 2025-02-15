@@ -35,7 +35,7 @@ function App() {
           <Route path="/" element={ authUser ? <HomePage/> : <Navigate to="/login"/>} />
           <Route path="/singup" element={ authUser===null ? <SingUpPage/> : <Navigate to="/"/>  } />
           <Route path="/login" element={ authUser===null ? <LoginPage/> : <Navigate to="/"/>} />
-          <Route path="/settings" element={  <SettingsPage/>} />
+          <Route path="/settings" element={ authUser ? <SettingsPage/> : <Navigate to="/login"/>  } />
           <Route path="/profile" element={authUser ? <ProfilPage/> : <Navigate to="/login"/>} />
         </Routes> 
         <Toaster/> 

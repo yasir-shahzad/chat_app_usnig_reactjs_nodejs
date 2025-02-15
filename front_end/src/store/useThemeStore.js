@@ -5,7 +5,7 @@ export const useThemeStore = create((set) => ({
     setTheme : (theme)=> {
         document.documentElement.setAttribute("data-theme", theme);
 
-        localStorage.setItem("theme", theme);
+        localStorage.setItem("theme", theme);   
         set({theme})
     }
 }));
